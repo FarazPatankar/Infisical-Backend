@@ -5,3 +5,5 @@ RUN echo "$RAILWAY_SERVICE_API_URL"
 RUN printenv
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
+
+CMD ["printenv"]
