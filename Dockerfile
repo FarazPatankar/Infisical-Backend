@@ -1,1 +1,0 @@
-FROM infisical/infisical:latest
