@@ -8,7 +8,7 @@ server {
         proxy_set_header Host $http_host;
         proxy_set_header X-NginX-Proxy true;
 
-        proxy_pass ${RAILWAY_SERVICE_INFISICAL_BACKEND_URL};
+        proxy_pass https://${RAILWAY_SERVICE_INFISICAL_BACKEND_URL};
         proxy_redirect off;
 
         proxy_cookie_path / "/; secure; HttpOnly; SameSite=strict";
@@ -26,7 +26,7 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
 
-        proxy_pass ${RAILWAY_SERVICE_INFISICAL_FRONTEND_URL};
+        proxy_pass https://${RAILWAY_SERVICE_INFISICAL_FRONTEND_URL};
         proxy_redirect off;
     }
 }
